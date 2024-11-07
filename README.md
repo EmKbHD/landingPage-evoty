@@ -4,4 +4,4 @@ eVoty is a voting platform that allows users to vote on candidates and see the r
 
 Here is the landing page of the project.
 
-Author: <Emmanuel KABALE>
+Author: Emmanuel KABALE
