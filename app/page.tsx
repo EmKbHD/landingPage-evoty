@@ -1,8 +1,9 @@
 import { Box } from "@chakra-ui/react";
+import Navbar from "@/Components/Navbar";
 export default function Home() {
   return (
     <Box bg="white" color="black" minHeight="100vh">
-      <h1>Hello World</h1>
+      <Navbar />
     </Box>
   );
 }
