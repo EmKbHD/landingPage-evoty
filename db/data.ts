@@ -6,14 +6,6 @@ import { HiClock } from "react-icons/hi2";
 import { HiMiniNewspaper } from "react-icons/hi2";
 import { HiChevronRight } from "react-icons/hi2";
 
-//import banners
-import Dashboard from "../assets/admin-dashboard.png";
-import carteVote from "../assets/carte-de-vote.png";
-//import testimonials
-import photo1 from "../assets/photo-1.png";
-import photo2 from "../assets/photo-2.png";
-import photo3 from "../assets/photo-3.png";
-
 export const NavbarMenu = [
   {
     id: 1,
@@ -98,7 +90,7 @@ export const BannersData = [
     title: "Vote Dashboard Data",
     description:
       "Get the real-time results of the elections...Ut velit mauris, egestas sed, gravida nec, ornare ut, mi. Aenean ut orci vel massa suscipit pulvinar. Nulla sollicitudin.",
-    img_url: Dashboard,
+    img_url: "/assets/admin-dashboard.png",
     button: {
       desc: "Read on",
       link: "#",
@@ -111,7 +103,7 @@ export const BannersData = [
     title: "Cards vote page",
     description:
       "Card or bulletin board of candidates and button to initiate the vote...Aliquam convallis sollicitudin purus. Praesent aliquam, enim.",
-    img_url: carteVote,
+    img_url: "/assets/carte-de-vote.png",
     button: {
       desc: "Read on",
       link: "#",
@@ -127,7 +119,7 @@ export const TestimonialsData = [
     name: "John Doe",
     role: "CEO / Company",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quidem, officiis, et, repellat repudiandae quae fugit nemo tempore rerum quas laboriosam.",
-    img: photo1,
+    img: "/assets/photo-1.png",
     rating: "⭐⭐⭐⭐⭐",
   },
   {
@@ -135,7 +127,7 @@ export const TestimonialsData = [
     name: "Bruce Lee",
     role: "Engineer / Company",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quidem, officiis, et, repellat repudiandae quae fugit nemo tempore rerum quas laboriosam.",
-    img: photo2,
+    img: "/assets/photo-2.png",
     rating: "⭐⭐⭐⭐",
   },
   {
@@ -143,7 +135,7 @@ export const TestimonialsData = [
     name: "Kali Mwendo",
     role: "Designer / Company",
     desc: "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, quidem, officiis, et, repellat repudiandae quae fugit nemo tempore rerum quas laboriosam.",
-    img: photo3,
+    img: "/assets/photo-3.png",
     rating: "⭐⭐⭐⭐⭐",
   },
 ];
