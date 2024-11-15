@@ -4,8 +4,7 @@ import { useState } from "react";
 import { NavbarMenu } from "../db/data";
 import { HiBars3 } from "react-icons/hi2";
 import NavbarMobile from "./NavbarMobile";
-import { Box, Flex, Image, Container, Link } from "@chakra-ui/react";
-import { Button } from "@/ui/button";
+import { Box, Flex, Image, Container, Link, Text } from "@chakra-ui/react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -41,7 +40,7 @@ const Navbar = () => {
             align="center"
             width="full"
             listStyle="none"
-            gap={{ base: "0.75rem", lg: "1.5rem" }}
+            gap={{ base: "0.75rem", md: "1.5rem", lg: "2rem" }}
           >
             {NavbarMenu.map((item) => {
               return (
@@ -64,21 +63,48 @@ const Navbar = () => {
           border={"1px solid #E5E5E5"}
           fontWeight="semibold"
           justifyContent="center"
-          gap="1rem"
+          // gap="1rem"
           px="1rem"
         >
-          <Link href="#" fontWeight="semibold" color="gray.600">
-            <Button>Sign up</Button>
+          <Link href="#" fontWeight="medium" color="gray.600">
+            <Text
+              as="button"
+              px="1rem"
+              py="0.5rem"
+              mr="0.75rem"
+              bg="secondary"
+              rounded="md"
+              color="white"
+            >
+              Sign up
+            </Text>
           </Link>
 
-          <Link href="#" fontWeight="semibold" color="gray.600">
-            <Button>Log in</Button>
+          <Link href="#" fontWeight="medium" color="gray.600">
+            <Text
+              as="button"
+              px="1rem"
+              py="0.5rem"
+              // mr="0.75rem"
+              bg="primary"
+              rounded="md"
+              color="white"
+            >
+              Log in
+            </Text>
           </Link>
         </Flex>
         {/* mobile hamburger menu area */}
-        <Box display="none" onClick={() => setIsOpen(!isOpen)}>
+        <Flex
+          border={"1px solid #E5E5E5"}
+          justifyContent="center"
+          align="center"
+          w="2.5rem"
+          md={{ display: "none" }}
+          onClick={() => setIsOpen(!isOpen)}
+        >
           <HiBars3 />
-        </Box>
+        </Flex>
       </Container>
       {/* mobile sidebar menu section */}
       <NavbarMobile open={isOpen} />

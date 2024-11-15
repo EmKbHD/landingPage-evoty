@@ -1,7 +1,7 @@
 import { motion, AnimatePresence, MotionProps } from "framer-motion";
 import { NavbarMenu } from "../db/data";
-import Link from "next/link";
-import { chakra, Box, Flex, BoxProps } from "@chakra-ui/react";
+// import Link from "next/link";
+import { chakra, Box, Flex, BoxProps, Link } from "@chakra-ui/react";
 
 const NavbarMobile: React.FC<{ open: boolean }> = ({ open }) => {
   // Define a MotionBox component with correct typings
@@ -13,9 +13,9 @@ const NavbarMobile: React.FC<{ open: boolean }> = ({ open }) => {
           initial={{ opacity: 0, y: -100 }}
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: -100 }}
-          transition={{ duration: 0.4 }}
+          transition={{ duration: 0.8 }}
           position="fixed"
-          top="4rem"
+          top="6.7rem"
           left={0}
           w="full"
           h="full"
@@ -40,7 +40,17 @@ const NavbarMobile: React.FC<{ open: boolean }> = ({ open }) => {
               {NavbarMenu.map((item) => {
                 return (
                   <li key={item.id}>
-                    <Link href={item.link}>{item.title}</Link>
+                    <Link
+                      href={item.link}
+                      py="0.25rem"
+                      px="0.75rem"
+                      fontWeight="medium"
+                      color="white"
+                      fontSize="1.25rem"
+                      _hover={{ color: "secondary" }}
+                    >
+                      {item.title}
+                    </Link>
                   </li>
                 );
               })}
