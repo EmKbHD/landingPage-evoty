@@ -42,16 +42,5 @@ export const system = createSystem(defaultConfig, {
     body: {
       background: "rgb(248, 249, 250)",
     },
-
-    // container: {
-    //   mx: "auto",
-    //   padding: {
-    //     base: { value: "1rem" },
-    //     sm: { value: "2rem" },
-    //     lg: { value: "4rem" },
-    //     xl: { value: "5rem" },
-    //     "2xl": { value: "6rem" },
-    //   },
-    // },
   },
 });
