@@ -51,14 +51,14 @@ const Hero = () => {
             initial="hidden"
             animate="visible"
             textStyle={{ base: "4xl", md: "5xl", lg: "7xl" }}
-            fontFamily="heading"
+            fontFamily="suse"
             fontWeight="bold"
             textTransform="capitalize"
             lineHeight={1.25}
             color="primary"
           >
             Vote anywhere <br />{" "}
-            <Text as="span" color="brand.400">
+            <Text as="span" color="brandSecondary.400">
               you are
             </Text>{" "}
             {""}
@@ -68,10 +68,14 @@ const Hero = () => {
             initial="hidden"
             animate="visible"
             textStyle={{ md: "xl" }}
-            color="gray.700"
             maxWidth={{ xl: "500px" }}
           >
-            <Text as="span" textStyle="xl" fontWeight="semibold">
+            <Text
+              as="span"
+              textStyle="xl"
+              fontWeight="semibold"
+              color="gray.700"
+            >
               Easily Create Elections and Pools
             </Text>
 
@@ -82,6 +86,7 @@ const Hero = () => {
               lineHeight="1.5"
               listStyleType="disc"
               ml="5"
+              color="gray.600"
             >
               <li>Simple elections and pool management</li>
               <li>Result in real-time</li>
@@ -106,6 +111,11 @@ const Hero = () => {
               size="lg"
               maxW="190px"
               flexGrow="1"
+              _hover={{
+                bg: "white",
+                color: "primary",
+                border: "1px solid rgb(5, 45, 82)",
+              }}
             >
               Get Started
             </Button>
@@ -116,26 +126,33 @@ const Hero = () => {
               size="lg"
               display="flex"
               alignItems="center"
-              _hover={{ bg: "brand.500" }}
+              color="brandSecondary.500"
+              _hover={{ bg: "brandSecondary.500", color: "white" }}
             >
-              <HiMiniPlayCircle fontSize="32px" color="red" />
-              <Text as="span" color="brand.500">
-                Watch Demo
-              </Text>
+              <HiMiniPlayCircle />
+              <Text as="span">Watch Demo</Text>
             </Button>
           </MotionBox>
         </Stack>
       </Flex>
       {/* Hero image */}
-      <Box border={"1px solid #E5E5E5"}>
+      <Flex
+        border={"1px solid #E5E5E5"}
+        justifyContent="center"
+        alignItems="center"
+        w="full"
+        order={{ md: "2" }}
+      >
         <MotionImage
           variants={SlideLeft(1)}
           animate="visible"
           initial={{ opacity: 0, x: 100 }}
           src="/assets/vote-undraw.svg"
           alt="VOTE IMAGE"
+          w={{ base: "21.875rem", md: "34.375rem", xl: "43.75rem" }}
+          h="3/4"
         />
-      </Box>
+      </Flex>
     </Container>
   );
 };

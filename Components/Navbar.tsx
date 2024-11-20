@@ -29,7 +29,6 @@ const Navbar = () => {
         {/* menu items area */}
         <Box
           border={"1px solid #E5E5E5"}
-          // display={{ base: "none", md: "block" }}
           hideBelow="md"
           md={{ display: "flex", justifyContent: "center", gap: "1rem" }}
         >
@@ -40,7 +39,7 @@ const Navbar = () => {
             align="center"
             width="full"
             listStyle="none"
-            gap={{ base: "0.75rem", md: "1.5rem", lg: "2rem" }}
+            gap={{ base: "0.75rem", md: "1.5rem", lg: "3.5rem" }}
           >
             {NavbarMenu.map((item) => {
               return (
@@ -50,6 +49,8 @@ const Navbar = () => {
                     fontWeight="semibold"
                     color="gray.600"
                     _hover={{ color: "red.500" }}
+                    fontSize={{ md: "1.125rem" }}
+                    lineHeight="1.75rem"
                   >
                     {item.title}
                   </Link>
