@@ -1,46 +1,87 @@
-import { FeaturesData } from "../../mockUpData/data.ts";
-import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
-import { SlideLeft } from "../../utility/animation.ts";
+"use client";
+import { FeaturesData } from "../db/data";
+import { SlideLeft } from "../utility/animation";
+import { motion, MotionProps } from "framer-motion";
+import {
+  Box,
+  BoxProps,
+  chakra,
+  Button,
+  Container,
+  Grid,
+  Link,
+  Text,
+} from "@chakra-ui/react";
 
 const Features = () => {
+  // Define Motion<tag> component with correct typings
+  const MotionBox = chakra(motion.div) as React.FC<BoxProps & MotionProps>;
+
   return (
-    <div className=" container py-[4rem] my-auto">
-      <h2 className=" text-3xl font-medium pb-[1rem] text-left md:text-center font-suse ">
+    <Container
+      border={"1px solid #E5E5E5"}
+      w="full"
+      mx="auto"
+      px={["1rem", "2rem", "4rem", "5rem", "6rem"]}
+      py="4rem"
+    >
+      <Text
+        as="h2"
+        fontSize="1.875rem"
+        fontWeight="medium"
+        pb="1rem"
+        textAlign={{ base: "left", md: "center" }}
+        fontFamily="suse"
+      >
         App Features
-      </h2>
-      <div className=" grid max-w-fit mx-auto md:mt-4 min-[767px]:grid-cols-2 lg:grid-cols-4 gap-6">
+      </Text>
+      <Grid
+        gridTemplateColumns={{
+          base: "1fr",
+          md: "repeat(2, 1fr)",
+          lg: "repeat(4, minmax(0, 1fr))",
+        }}
+        maxW="fit-content"
+        mx="auto"
+        mt={{ md: "1rem" }}
+        gridGap="1.5rem"
+      >
         {FeaturesData.map((item) => {
           return (
-            <motion.div
+            <MotionBox
               variants={SlideLeft(item.delay)}
               key={item.id}
               initial="hidden"
               whileInView="visible"
-              className="space-y-2 px-6 py-8 bg-[#F1F4F5] grid rounded-lg hover:shadow-lg"
+              spaceY="0.5rem"
+              px="1.5rem"
+              py="4rem"
+              bg="#F1F4F5"
+              display="grid"
+              rounded="lg"
+              _hover={{
+                shadow:
+                  "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);",
+              }}
             >
-              <div className="md:mx-auto mb-4 md:mb-8">
+              <Box>
                 {/* Render icon as a JSX component */}
-                {item.icon && (
-                  <item.icon className="w-16 aspect-square text-secondary/80" />
-                )}
-              </div>
-              <div className="text-2xl font-semibold md:mx-auto">
-                {item.title}
-              </div>
-              <p className="text-gray-600 md:text-center">{item.desc}</p>
-              <Link className="md:mx-auto" to={item.button.link}>
-                <button className="primary-btn-outline text-sm mt-2 flex items-center justify-center gap-1 font-semibold ">
+                {item.icon && <item.icon />}
+              </Box>
+              <Box>{item.title}</Box>
+              <Text as="p">{item.desc}</Text>
+              <Link href={item.button.link}>
+                <Button>
                   {/* Render icon as a JSX component */}
                   {item.button.desc}
-                  {item.button.icon && <item.button.icon className="w-4" />}
-                </button>
+                  {item.button.icon && <item.button.icon />}
+                </Button>
               </Link>
-            </motion.div>
+            </MotionBox>
           );
         })}
-      </div>
-    </div>
+      </Grid>
+    </Container>
   );
 };
 
