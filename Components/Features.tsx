@@ -27,11 +27,12 @@ const Features = () => {
     >
       <Text
         as="h2"
-        fontSize="1.875rem"
-        fontWeight="medium"
+        fontSize="3xl"
+        fontWeight="semibold"
         pb="1rem"
         textAlign={{ base: "left", md: "center" }}
         fontFamily="suse"
+        color="primary"
       >
         App Features
       </Text>
@@ -55,7 +56,7 @@ const Features = () => {
               whileInView="visible"
               spaceY="0.5rem"
               px="1.5rem"
-              py="4rem"
+              py="2rem"
               bg="#F1F4F5"
               display="grid"
               rounded="lg"
@@ -64,14 +65,24 @@ const Features = () => {
                   "0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);",
               }}
             >
-              <Box>
+              <Box mx={{ md: "auto" }} mb={{ base: "1rem", md: "2rem" }}>
                 {/* Render icon as a JSX component */}
-                {item.icon && <item.icon />}
+                {item.icon && <item.icon size="4rem" color="#e05151" />}
               </Box>
-              <Box>{item.title}</Box>
-              <Text as="p">{item.desc}</Text>
-              <Link href={item.button.link}>
-                <Button>
+              <Box textStyle="1.5rem" fontWeight="semibold" mx={{ md: "auto" }}>
+                {item.title}
+              </Box>
+              <Text as="p" color="gray.600" textAlign={{ md: "center" }}>
+                {item.desc}
+              </Text>
+              <Link href={item.button.link} mx={{ md: "auto" }}>
+                <Button
+                  variant="outline"
+                  bg="transparent"
+                  color="primary"
+                  borderColor="primary"
+                  _hover={{ bg: "primary", color: "white" }}
+                >
                   {/* Render icon as a JSX component */}
                   {item.button.desc}
                   {item.button.icon && <item.button.icon />}

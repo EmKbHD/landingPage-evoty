@@ -58,7 +58,17 @@ const Hero = () => {
             color="primary"
           >
             Vote anywhere <br />{" "}
-            <Text as="span" color="brandSecondary.400">
+            <Text
+              as="span"
+              color="brandSecondary.400"
+              py="1"
+              pl="0.5rem"
+              pr="1rem"
+              bg="brandSecondary.100/50"
+              borderLeftRadius="md"
+              borderRightColor="#d92c2c"
+              borderRightWidth="3px"
+            >
               you are
             </Text>{" "}
             {""}
@@ -99,9 +109,9 @@ const Hero = () => {
             initial="hidden"
             animate="visible"
             display="flex"
-            maxWidth="400px"
+            maxWidth={{ md: "400px" }}
             fontWeight="semibold"
-            gap="4"
+            gap="1rem"
             justifyContent={{ md: "flex-start" }}
           >
             <Button
@@ -109,7 +119,7 @@ const Hero = () => {
               bg="primary"
               color="white"
               size="lg"
-              maxW="190px"
+              maxW="187px"
               flexGrow="1"
               _hover={{
                 bg: "white",
