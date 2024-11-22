@@ -1,10 +1,33 @@
 import { BannersData } from "../db/data";
-import { motion } from "framer-motion";
+import { motion, MotionProps } from "framer-motion";
 import { SlideUp } from "../utility/animation";
+import {
+  Box,
+  chakra,
+  Container,
+  HeadingProps,
+  TextProps,
+  ImageProps,
+  Stack,
+  Text,
+} from "@chakra-ui/react";
 
 const Banners = () => {
+  // Define custom Motion<tag> component with correct typings
+  const MotionHeading = chakra(motion.h1) as React.FC<
+    HeadingProps & MotionProps
+  >;
+  const MotionText = chakra(motion.p) as React.FC<TextProps & MotionProps>;
+  const MotionImage = chakra(motion.img) as React.FC<ImageProps & MotionProps>;
+
   return (
-    <Container>
+    <Container
+      border={"1px solid #E5E5E5"}
+      w="full"
+      mx="auto"
+      px={["1rem", "2rem", "4rem", "5rem", "6rem"]}
+      py="4rem"
+    >
       <Box>
         <Text as="h2">
           How{" "}
@@ -15,25 +38,26 @@ const Banners = () => {
         </Text>
         <Text as="span">Why create your vote with us ?</Text>
         <Text as="p">
-          Let's start by identifying what the PM is not. The PM is not the owner
-          of the project. The PM is the sponsor, i.e. the person who appoints
-          the PM and makes the commitment. eVoty is a platform that allows users
-          to easily create, manage, and vote on their favorite candidates. It's
-          designed to be accessible, transparent, and easy to use for everyone.
+          Let&apos;s start by identifying what the PM is not. The PM is not the
+          owner of the project. The PM is the sponsor, i.e. the person who
+          appoints the PM and makes the commitment. eVoty is a platform that
+          allows users to easily create, manage, and vote on their favorite
+          candidates. It&apos;s designed to be accessible, transparent, and easy
+          to use for everyone.
         </Text>
         {/* Render each banner as a section with image and text */}
         {BannersData.map((item) => {
           return (
-            <Box as="section">
+            <Box as="section" key={item.id}>
               {/* banner image section */}
-              <div
+              <Stack
                 className={
                   item.id === 2
                     ? "p-2 order-none drop-shadow md:order-2 "
                     : "p-2 drop-shadow "
                 }
               >
-                <motion.img
+                <MotionImage
                   initial={{ opacity: 0, scale: 0.5 }}
                   whileInView={{ opacity: 1, scale: 1 }}
                   transition={{
@@ -44,7 +68,7 @@ const Banners = () => {
                   src={item.img_url}
                   alt="dashboard image"
                 />
-              </div>
+              </Stack>
               {/* banner text section */}
               <div
                 className={
@@ -60,23 +84,23 @@ const Banners = () => {
                       : " py-4 "
                   }
                 >
-                  <motion.h3
+                  <MotionHeading
                     variants={SlideUp(0.5)}
                     initial="hidden"
                     whileInView={"visible"}
                     viewport={{ once: true }}
                   >
                     {item.title}
-                  </motion.h3>
-                  <motion.p
+                  </MotionHeading>
+                  <MotionText
                     variants={SlideUp(0.7)}
                     initial="hidden"
                     whileInView={"visible"}
                     viewport={{ once: true }}
                   >
                     {item.description}
-                  </motion.p>
-                  <motion.p
+                  </MotionText>
+                  <MotionText
                     variants={SlideUp(0.9)}
                     initial="hidden"
                     whileInView={"visible"}
@@ -86,7 +110,7 @@ const Banners = () => {
                     <a href={item.button.link} target="_blank">
                       {item.button.desc}
                     </a>
-                  </motion.p>
+                  </MotionText>
                 </div>
               </div>
             </Box>
