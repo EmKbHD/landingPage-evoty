@@ -1,3 +1,4 @@
+"use client";
 import { BannersData } from "../db/data";
 import { motion, MotionProps } from "framer-motion";
 import { SlideUp } from "../utility/animation";
@@ -10,6 +11,7 @@ import {
   ImageProps,
   Stack,
   Text,
+  Grid,
 } from "@chakra-ui/react";
 
 const Banners = () => {
@@ -22,22 +24,37 @@ const Banners = () => {
 
   return (
     <Container
-      border={"1px solid #E5E5E5"}
+      border="1px solid #E5E5E5"
       w="full"
       mx="auto"
       px={["1rem", "2rem", "4rem", "5rem", "6rem"]}
       py="4rem"
     >
-      <Box>
-        <Text as="h2">
+      <Box spaceY="6">
+        <Text
+          as="h2"
+          textStyle="3xl"
+          fontWeight="semibold"
+          textAlign="center"
+          color="primary"
+          mb="3rem"
+        >
           How{" "}
-          <strong>
-            <span>e</span>Voty{" "}
-          </strong>{" "}
-          works
+          <Text as="span" color="brandSecondary.400">
+            e
+          </Text>
+          Voty works ?
         </Text>
-        <Text as="span">Why create your vote with us ?</Text>
-        <Text as="p">
+        <Text
+          as="span"
+          textStyle="lg"
+          fontWeight="semibold"
+          color="gray.600"
+          py={{ md: "2rem" }}
+        >
+          Why create your vote with us ?
+        </Text>
+        <Text as="p" color="gray.600" fontSize="lg">
           Let&apos;s start by identifying what the PM is not. The PM is not the
           owner of the project. The PM is the sponsor, i.e. the person who
           appoints the PM and makes the commitment. eVoty is a platform that
@@ -48,14 +65,25 @@ const Banners = () => {
         {/* Render each banner as a section with image and text */}
         {BannersData.map((item) => {
           return (
-            <Box as="section" key={item.id}>
+            <Grid
+              as="section"
+              key={item.id}
+              gridTemplateColumns={{
+                base: "repeat(1, 1fr)",
+                md: "repeat(2, 1fr)",
+              }}
+              placeContent="center"
+              placeItems="center"
+              py="2rem"
+              gap="1rem"
+            >
               {/* banner image section */}
               <Stack
-                className={
-                  item.id === 2
-                    ? "p-2 order-none drop-shadow md:order-2 "
-                    : "p-2 drop-shadow "
-                }
+              // {
+              //   item.id === 2
+              //     ? ${}
+              //     : ${}
+              // }
               >
                 <MotionImage
                   initial={{ opacity: 0, scale: 0.5 }}
@@ -113,7 +141,7 @@ const Banners = () => {
                   </MotionText>
                 </div>
               </div>
-            </Box>
+            </Grid>
           );
         })}
       </Box>

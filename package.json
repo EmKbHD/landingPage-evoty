@@ -9,11 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@ark-ui/react": "^4.4.4",
     "@chakra-ui/react": "^3.1.0",
     "@chakra-ui/theme-tools": "^2.2.6",
     "@emotion/react": "^11.13.3",
     "@emotion/styled": "^11.13.0",
     "@internationalized/date": "^3.5.6",
+    "@zag-js/auto-resize": "^0.77.1",
     "add": "^2.0.6",
     "framer-motion": "^11.11.11",
     "next": "^15.0.3",
