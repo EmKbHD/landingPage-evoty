@@ -25,8 +25,9 @@ const WhatIsEVoty = () => {
           Voty ?
         </Box>
         <Stack
-          textStyle={{ base: "18px", md: "20px" }}
+          textStyle={{ base: "18px", md: "lg" }}
           textAlign="center"
+          color="gray.700"
           mt="1rem"
           px={{ md: "2rem", lg: "5rem" }}
           mx={{ md: "auto" }}

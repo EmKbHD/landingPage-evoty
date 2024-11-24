@@ -4,11 +4,13 @@ import { motion, MotionProps } from "framer-motion";
 import { SlideUp } from "../utility/animation";
 import {
   Box,
+  Button,
   chakra,
   Container,
   HeadingProps,
   TextProps,
   ImageProps,
+  Link,
   Stack,
   Text,
   Grid,
@@ -47,7 +49,7 @@ const Banners = () => {
         </Text>
         <Text
           as="span"
-          textStyle="lg"
+          textStyle="xl"
           fontWeight="semibold"
           color="gray.600"
           py={{ md: "2rem" }}
@@ -98,25 +100,45 @@ const Banners = () => {
                 />
               </Stack>
               {/* banner text section */}
-              <div
-                className={
-                  item.id === 2
-                    ? " relative p-4 md:p-11 w-full min-h-fit space-y-4 text-left"
-                    : " relative p-4 md:p-11 w-full space-y-4 flex "
-                }
+              <Box
+                {...(item.id === 2
+                  ? {
+                      minH: "fit-content",
+                      textAlign: "left",
+                    }
+                  : {
+                      display: "flex",
+                    })}
+                position="relative"
+                p={{ base: 4, md: 11 }}
+                w="full"
+                spaceY={4}
               >
-                <div
-                  className={
-                    item.id === 1
-                      ? "md:absolute md:inset-y-0 md:right-0 flex flex-col justify-center w-fit md:px-4 lg:px-0"
-                      : " py-4 "
-                  }
+                <Box
+                  {...(item.id === 1
+                    ? {
+                        position: { md: "absolute" },
+                        insetY: { md: 0 },
+                        right: { md: 0 },
+                        display: "flex",
+                        flexDirection: "column",
+                        justifyContent: "center",
+                        w: "fit-content",
+                        px: { md: 4, lg: 0 },
+                      }
+                    : {
+                        py: 4,
+                      })}
                 >
                   <MotionHeading
                     variants={SlideUp(0.5)}
                     initial="hidden"
                     whileInView={"visible"}
                     viewport={{ once: true }}
+                    textStyle="2xl"
+                    spaceY={4}
+                    fontWeight="semibold"
+                    color="gray.600"
                   >
                     {item.title}
                   </MotionHeading>
@@ -125,6 +147,10 @@ const Banners = () => {
                     initial="hidden"
                     whileInView={"visible"}
                     viewport={{ once: true }}
+                    maxW={{ base: "sm", lg: "lg" }}
+                    textStyle="lg"
+                    color="gray.600"
+                    my={{ base: 2, lg: 4 }}
                   >
                     {item.description}
                   </MotionText>
@@ -133,14 +159,24 @@ const Banners = () => {
                     initial="hidden"
                     whileInView={"visible"}
                     viewport={{ once: true }}
-                    className={item.id === 2 ? "mt-8" : "mt-4"}
+                    {...(item.id === 2 ? { mt: 8 } : { mt: 4 })}
                   >
-                    <a href={item.button.link} target="_blank">
-                      {item.button.desc}
-                    </a>
+                    <Link href={item.button.link} target="_blank">
+                      <Button
+                        variant="outline"
+                        border="1px solid #e05151"
+                        size="lg"
+                        display="flex"
+                        alignItems="center"
+                        color="brandSecondary.500"
+                        _hover={{ bg: "brandSecondary.500", color: "white" }}
+                      >
+                        {item.button.desc}
+                      </Button>
+                    </Link>
                   </MotionText>
-                </div>
-              </div>
+                </Box>
+              </Box>
             </Grid>
           );
         })}
