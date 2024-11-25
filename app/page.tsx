@@ -4,6 +4,7 @@ import HeroSection from "@/Components/HeroSection";
 import Features from "@/Components/Features";
 import WhatIsEvoty from "@/Components/WhatIsEvoty";
 import Banners from "@/Components/Banners";
+import Pricing from "@/Components/Pricing";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
       <Features />
       <WhatIsEvoty />
       <Banners />
+      <Pricing />
     </Box>
   );
 }

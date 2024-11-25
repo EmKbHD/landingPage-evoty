@@ -144,7 +144,7 @@ export const TestimonialsData = [
 export const planMonthly = [
   {
     category: "Free",
-    price: "$0 / Year",
+    price: "$0 / Month",
     detail: "Best for solo creator",
     features: [
       { title: "Create 3 Votes", details: ["5 candidates", "50 voters"] },
@@ -159,7 +159,7 @@ export const planMonthly = [
   },
   {
     category: "Professional",
-    price: "$13 / Year",
+    price: "$13 / Month",
     detail: "Most popular plan",
     features: [
       {
@@ -182,7 +182,7 @@ export const planMonthly = [
   },
   {
     category: "Premium",
-    price: "$20 / Year",
+    price: "$20 / Month",
     detail: "Exclusive for teams",
     features: [
       {
