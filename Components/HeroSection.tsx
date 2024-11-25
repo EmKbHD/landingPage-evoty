@@ -12,7 +12,6 @@ import {
   Button,
   Container,
   BoxProps,
-  // TextProps,
   HeadingProps,
   ImageProps,
 } from "@chakra-ui/react";

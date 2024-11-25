@@ -1,6 +1,5 @@
 import {
   Box,
-  // Divider,
   Button,
   // chakra,
   // Container,
@@ -77,7 +76,12 @@ const PricingCard: React.FC<PricingCardProps> = ({
           {detail}
         </Text>
         {/* <Divider borderColor="gray.200" mb={4} /> */}
-        <Box borderBottom="1px" borderColor="gray.200" mb={4} />
+        <Box
+          w="full"
+          borderBottom="1px solid gray"
+          borderColor="gray.200"
+          mb={4}
+        />
       </Box>
 
       <Box as="ul" textAlign="left" spaceY={3}>

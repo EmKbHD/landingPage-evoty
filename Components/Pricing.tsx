@@ -42,7 +42,7 @@ const Pricing: React.FC = () => {
           <Text as="h2" fontSize={{ base: "3xl", md: "4xl" }} fontWeight="bold">
             Choose The Right Plan for Your Business
           </Text>
-          <Text fontSize="lg" color={"gray.600"}>
+          <Text fontSize="lg" color={"gray.600"} textAlign="center">
             Start with 14-day free trial. No credit card needed. Cancel at
             anytime.
           </Text>
@@ -107,7 +107,7 @@ const Pricing: React.FC = () => {
           px={4}
           gridTemplateColumns={{ base: "repeat(1, minmax(0, 1fr))" }}
           display={{ base: "grid", md: "flex" }}
-          gap={{ md: 2, lg: 4 }}
+          gap={{ base: 2, lg: 4 }}
         >
           {plans.map((data) => {
             return (

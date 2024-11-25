@@ -83,7 +83,6 @@ const Banners = () => {
               <Stack
                 p={2}
                 order={item.id === 2 ? { base: "none", md: 2 } : undefined}
-                boxShadow="0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.2);"
               >
                 <MotionImage
                   initial={{ opacity: 0, scale: 0.5 }}
@@ -97,6 +96,8 @@ const Banners = () => {
                   alt="dashboard image"
                   objectFit="cover"
                   minW="360px"
+                  bgBlendMode="screen"
+                  boxShadow="0 10px 15px -3px rgb(0 0 0 / 0.2), 0 4px 6px -4px rgb(0 0 0 / 0.2);"
                 />
               </Stack>
               {/* banner text section */}
