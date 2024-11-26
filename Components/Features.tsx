@@ -36,6 +36,18 @@ const Features = () => {
       >
         App Features
       </Text>
+      <Text
+        as="p"
+        fontSize="lg"
+        color="gray.500"
+        fontWeight="medium"
+        pb="1rem"
+        textAlign="center"
+      >
+        Built for modern elections in real-time. <br /> From next-gen startups
+        to established enterprises.
+      </Text>
+
       <Grid
         gridTemplateColumns={{
           base: "1fr",

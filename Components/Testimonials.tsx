@@ -50,13 +50,37 @@ const Testimonials = () => {
         <Text
           as="h2"
           textAlign={{ base: "left", md: "center" }}
-          mb={10}
+          mb={8}
           fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
           fontWeight="bold"
         >
           What are the Customers
           <br /> Saying about us ?
         </Text>
+        <Text
+          as="p"
+          fontSize="xl"
+          fontWeight="medium"
+          textAlign="center"
+          mb={8}
+          color="gray.500"
+        >
+          Top-tier People use and{" "}
+          <Text
+            as="span"
+            color="brandSecondary.400"
+            py={1}
+            px=".5rem"
+            bg="brandSecondary.100/50"
+            fontWeight="semibold"
+            borderLeftRadius="md"
+            borderRightColor="#d92c2c"
+            borderRightWidth="3px"
+          >
+            love eVoty
+          </Text>{" "}
+        </Text>
+
         {/* Testimonial customers Carousel  cards start here */}
         <Slider {...settings}>
           {TestimonialsData.map((item) => (
