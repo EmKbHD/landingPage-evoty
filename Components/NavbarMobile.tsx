@@ -1,6 +1,5 @@
 import { motion, AnimatePresence, MotionProps } from "framer-motion";
 import { NavbarMenu } from "../db/data";
-// import Link from "next/link";
 import { chakra, Box, Flex, BoxProps, Link } from "@chakra-ui/react";
 
 const NavbarMobile: React.FC<{ open: boolean }> = ({ open }) => {

@@ -104,7 +104,7 @@ const Navbar = () => {
           md={{ display: "none" }}
           onClick={() => setIsOpen(!isOpen)}
         >
-          <HiBars3 />
+          <HiBars3 size="2rem" color="brandPrimary" />
         </Flex>
       </Container>
       {/* mobile sidebar menu section */}

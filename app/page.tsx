@@ -5,6 +5,7 @@ import Features from "@/Components/Features";
 import WhatIsEvoty from "@/Components/WhatIsEvoty";
 import Banners from "@/Components/Banners";
 import Pricing from "@/Components/Pricing";
+import VotePool from "@/Components/VotePool";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
       <WhatIsEvoty />
       <Banners />
       <Pricing />
+      <VotePool />
     </Box>
   );
 }

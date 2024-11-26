@@ -107,6 +107,7 @@ const Pricing: React.FC = () => {
           px={4}
           gridTemplateColumns={{ base: "repeat(1, minmax(0, 1fr))" }}
           display={{ base: "grid", md: "flex" }}
+          justifyItems="center"
           gap={{ base: 2, lg: 4 }}
         >
           {plans.map((data) => {

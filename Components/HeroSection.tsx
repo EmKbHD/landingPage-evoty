@@ -119,7 +119,7 @@ const Hero = () => {
               color="white"
               size="lg"
               maxW="187px"
-              flexGrow="1"
+              flex="1"
               _hover={{
                 bg: "white",
                 color: "primary",
@@ -135,6 +135,7 @@ const Hero = () => {
               size="lg"
               display="flex"
               alignItems="center"
+              flex="1"
               color="brandSecondary.500"
               _hover={{ bg: "brandSecondary.500", color: "white" }}
             >

@@ -40,8 +40,9 @@ const PricingCard: React.FC<PricingCardProps> = ({
       {...(recommended
         ? { position: "relative", color: "white", bg: "primary" }
         : { border: "1px solid gray", borderColor: "gray.200" })}
-      w={{ base: "full", md: "1/3" }}
+      w={{ base: "340px", md: "2/5" }}
       borderRadius="lg"
+      justifyItems="center"
       textAlign="center"
       px={{ base: 4, md: 6 }}
     >

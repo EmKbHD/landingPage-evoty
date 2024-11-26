@@ -2,10 +2,10 @@
 import { motion, MotionProps } from "framer-motion";
 import { SlideLeft } from "../utility/animation";
 import {
-  Box,
   BoxProps,
   Button,
-  HStack,
+  Flex,
+  VStack,
   chakra,
   Container,
   HeadingProps,
@@ -18,33 +18,72 @@ const VotePool = () => {
     HeadingProps & MotionProps
   >;
   return (
-    <Box>
-      <Container>
+    <Flex w="full" bg="brandSecondary.50/50">
+      <Container
+        border="1px solid #E5E5E5"
+        w="full"
+        mx="auto"
+        px={["1rem", "2rem", "4rem", "5rem", "6rem"]}
+        py="4rem"
+        display="flex"
+        flexDirection="column"
+        justifyContent="center"
+        alignItems="center"
+      >
         <MotionHeading
           variants={SlideLeft(0.5)}
           initial="hidden"
           whileInView={"visible"}
           viewport={{ once: true }}
+          textStyle={{ base: "2xl", md: "4xl" }}
+          fontWeight="bold"
+          textAlign="center"
+          color="brandPrimary.900"
         >
           Votes and Pools are{" "}
-          <Text as="span">
-            easy to
-            <br /> use and secured
+          <Text as="span" color="brandSecondary.400">
+            Easy to
+            <br /> Use and Secured
           </Text>
         </MotionHeading>
-        <HStack>
+        <VStack pt={8} w="full">
           <MotionBox
             variants={SlideLeft(0.9)}
             initial="hidden"
             whileInView={"visible"}
             viewport={{ once: true }}
+            display="flex"
+            justifyContent="center"
+            alignItems="center"
+            maxWidth={{ base: "320px", md: "400px" }}
+            w="full"
           >
-            <Button>Try Free</Button>
-            <Button>Go Premium</Button>
+            <Button
+              variant="solid"
+              bg="brandPrimary.900"
+              color="white"
+              size="lg"
+              flex={1}
+              mr={{ base: 2, md: 4 }}
+              _hover={{ bg: "brandPrimary.800", color: "white" }}
+            >
+              Try Free
+            </Button>
+            <Button
+              variant="outline"
+              borderColor="brandSecondary.500"
+              color="brandSecondary.500"
+              size="lg"
+              _hover={{ bg: "brandSecondary.500", color: "white" }}
+              flex={1}
+              px={2}
+            >
+              Go Premium
+            </Button>
           </MotionBox>
-        </HStack>
+        </VStack>
       </Container>
-    </Box>
+    </Flex>
   );
 };
 
