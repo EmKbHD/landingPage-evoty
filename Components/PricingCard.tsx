@@ -1,17 +1,4 @@
-import {
-  Box,
-  Button,
-  // chakra,
-  // Container,
-  // HeadingProps,
-  // TextProps,
-  // ImageProps,
-  // Link,
-  // Stack,
-  Text,
-  Grid,
-  Flex,
-} from "@chakra-ui/react";
+import { Box, Button, Text, Grid, Flex } from "@chakra-ui/react";
 
 interface Feature {
   title: string;

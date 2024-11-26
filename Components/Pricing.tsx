@@ -3,21 +3,7 @@ import { useState } from "react";
 import PricingCard from "./PricingCard";
 import { planAnnual, planMonthly } from "../db/data";
 
-import {
-  Box,
-  Button,
-  // chakra,
-  Container,
-  // HeadingProps,
-  // TextProps,
-  // ImageProps,
-  // Link,
-  // Stack,
-  Text,
-  // Grid,
-  Flex,
-  VStack,
-} from "@chakra-ui/react";
+import { Box, Button, Container, Text, Flex, VStack } from "@chakra-ui/react";
 
 const Pricing: React.FC = () => {
   const [monthly, setIsMonthly] = useState(true);
@@ -43,8 +29,8 @@ const Pricing: React.FC = () => {
             Choose The Right Plan for Your Business
           </Text>
           <Text fontSize="lg" color={"gray.600"} textAlign="center">
-            Start with 14-day free trial. No credit card needed. Cancel at
-            anytime.
+            Start with 14-day free trial. <br /> No credit card needed. Cancel
+            at anytime.
           </Text>
         </VStack>
         <Flex
