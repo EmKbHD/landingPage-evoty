@@ -7,6 +7,7 @@ import Banners from "@/Components/Banners";
 import Pricing from "@/Components/Pricing";
 import VotePool from "@/Components/VotePool";
 import Testimonials from "@/Components/Testimonials";
+import Footer from "@/Components/Footer";
 
 export default function Home() {
   return (
@@ -19,6 +20,7 @@ export default function Home() {
       <Pricing />
       <VotePool />
       <Testimonials />
+      <Footer />
     </Box>
   );
 }
