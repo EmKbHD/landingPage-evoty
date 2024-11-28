@@ -115,7 +115,7 @@ const Hero = () => {
               maxW="187px"
               flex="1"
               _hover={{
-                bg: "white",
+                bg: "transparent",
                 color: "primary",
                 border: "1px solid rgb(5, 45, 82)",
                 transform: "scale(1.05)",

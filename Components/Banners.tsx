@@ -29,29 +29,28 @@ const Banners = () => {
       w="full"
       mx="auto"
       px={["1rem", "2rem", "4rem", "5rem", "6rem"]}
-      py="4rem"
+      py={{ base: "2rem", md: "4rem" }}
     >
-      <Box spaceY="6">
+      <Box spaceY={{ base: 4, md: 6 }}>
         <Text
           as="h2"
-          textStyle="3xl"
-          fontWeight="semibold"
+          fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+          fontWeight="bold"
           textAlign="center"
           color="primary"
-          mb="3rem"
         >
-          How{" "}
+          How our&nbsp;
           <Text as="span" color="brandSecondary.400">
             e
           </Text>
-          Voty works ?
+          Voty app works ?
         </Text>
         <Text
-          as="span"
+          as="h3"
           textStyle="xl"
+          textAlign="center"
           fontWeight="semibold"
           color="gray.600"
-          py={{ md: "2rem" }}
         >
           Why create your vote with us ?
         </Text>
@@ -75,7 +74,7 @@ const Banners = () => {
               }}
               placeContent="center"
               placeItems="center"
-              py="2rem"
+              // py="2rem"
               gap="1rem"
             >
               {/* banner image section */}
@@ -112,7 +111,7 @@ const Banners = () => {
                 position="relative"
                 p={{ base: 4, md: 11 }}
                 w="full"
-                spaceY={4}
+                spaceY={{ base: 2, md: 4 }}
               >
                 <Box
                   {...(item.id === 1

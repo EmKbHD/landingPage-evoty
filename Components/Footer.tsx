@@ -34,7 +34,7 @@ const Footer = () => {
   return (
     <Box
       bgGradient="to-r"
-      gradientFrom="#06062C"
+      gradientFrom="#00001B"
       gradientTo="#010102"
       borderTopRadius="2xl"
     >
@@ -52,9 +52,9 @@ const Footer = () => {
         >
           {/* Company info here */}
           <GridItem
-            minW={{ base: "155px", md: "200px" }}
+            width={["100px", "150px", "200px"]}
             py={8}
-            px={4}
+            px={{ base: 2, md: 4 }}
             spaceY={4}
           >
             <Box>
@@ -85,7 +85,7 @@ const Footer = () => {
                 base: "repeat(2, 1fr)",
                 lg: "repeat(3, 1fr)",
               }}
-              ml={{ base: 8, md: 14 }}
+              ml={{ base: 4, md: 14 }}
             >
               {/* Important links start here */}
               <GridItem py={8} px={4}>
@@ -136,7 +136,7 @@ const Footer = () => {
         </Grid>
         {/* copyright area  */}
         <Box
-          borderTop="1px solid #E5E5E5"
+          borderTop="1px solid #A0A0A0"
           w="full"
           pt={8}
           px={4}

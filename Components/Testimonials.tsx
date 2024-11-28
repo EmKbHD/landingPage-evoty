@@ -49,8 +49,8 @@ const Testimonials = () => {
         {/* header section start here */}
         <Text
           as="h2"
-          textAlign={{ base: "left", md: "center" }}
-          mb={8}
+          textAlign="center"
+          mb={4}
           fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
           fontWeight="bold"
         >

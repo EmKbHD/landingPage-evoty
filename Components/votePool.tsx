@@ -20,7 +20,6 @@ const VotePool = () => {
   return (
     <Flex w="full" bg="brandSecondary.50/50">
       <Container
-        
         w="full"
         mx="auto"
         px={["1rem", "2rem", "4rem", "5rem", "6rem"]}
@@ -59,23 +58,34 @@ const VotePool = () => {
             w="full"
           >
             <Button
+              width={["100px", "150px", "200px"]}
               variant="solid"
               bg="brandPrimary.900"
               color="white"
               size="lg"
-              flex={1}
               mr={{ base: 2, md: 4 }}
-              _hover={{ bg: "brandPrimary.800", color: "white" }}
+              _hover={{
+                bg: "transparent",
+                color: "primary",
+                border: "1px solid rgb(5, 45, 82)",
+                transform: "scale(1.05)",
+                transition: "transform 300ms ease-in-out",
+              }}
             >
               Try Free
             </Button>
             <Button
+              width={["100px", "150px", "200px"]}
               variant="outline"
               borderColor="brandSecondary.500"
               color="brandSecondary.500"
               size="lg"
-              _hover={{ bg: "brandSecondary.500", color: "white" }}
-              flex={1}
+              _hover={{
+                bg: "brandSecondary.500",
+                color: "white",
+                transform: "scale(1.05)",
+                transition: "transform 300ms ease-in-out",
+              }}
               px={2}
             >
               Go Premium

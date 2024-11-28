@@ -11,11 +11,11 @@ const WhatIsEVoty = () => {
       >
         <Box
           as="h2"
-          textStyle="3xl"
-          fontWeight="semibold"
+          fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+          fontWeight="bold"
           textAlign="center"
           color="primary"
-          mb="3.5rem"
+          mb="2rem"
         >
           What is{" "}
           <Text as="span" color="brandSecondary.400">
