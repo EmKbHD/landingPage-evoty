@@ -33,7 +33,6 @@ const Hero = () => {
       position="relative"
       w="dvw"
       mx="auto"
-      border={"1px solid #E5E5E5"}
       px={["1rem", "2rem", "4rem", "5rem", "6rem"]}
       py="1.25rem"
     >
@@ -161,6 +160,7 @@ const Hero = () => {
           alt="VOTE IMAGE"
           w={{ base: "21.875rem", md: "34.375rem", xl: "43.75rem" }}
           h="3/4"
+          filter="drop-shadow(-6px 8px 15px rgba(0, 0, 0, 0.3))"
         />
       </Flex>
     </Container>

@@ -34,13 +34,12 @@ const Footer = () => {
   return (
     <Box
       bgGradient="to-r"
-      gradientFrom="brandPrimary.800"
-      gradientTo="brandPrimary.900"
+      gradientFrom="#2e0909"
+      gradientTo="gray.900"
       borderTopRadius="2xl"
     >
       <Container mx="auto" px={["1rem", "2rem", "4rem", "5rem", "6rem"]} py={8}>
         <Grid
-          border="1px solid #E5E5E5"
           templateColumns={{
             base: "repeat(2, 1fr 2fr)",
             md: "repeat(2, 1fr 3fr)",
@@ -53,7 +52,6 @@ const Footer = () => {
         >
           {/* Company info here */}
           <GridItem
-            border="1px solid #E5E5E5"
             minW={{ base: "155px", md: "200px" }}
             py={8}
             px={4}
@@ -83,14 +81,13 @@ const Footer = () => {
           {/* Links start here */}
           <GridItem colSpan={3}>
             <Grid
-              border="1px solid #E5E5E5"
               gridTemplateColumns={{
                 base: "repeat(2, 1fr)",
                 lg: "repeat(3, 1fr)",
               }}
             >
               {/* Important links start here */}
-              <GridItem border="1px solid #E5E5E5" py={8} px={4}>
+              <GridItem py={8} px={4}>
                 <Text as="h2" fontSize="lg" fontWeight="bold" mb={4}>
                   Important Links
                 </Text>
@@ -98,14 +95,19 @@ const Footer = () => {
                   {NavbarMenu.map((item) => {
                     return (
                       <li key={item.id}>
-                        <Link href={item.link}>{item.title}</Link>
+                        <Link
+                          href={item.link}
+                          _hover={{ color: "brandSecondary.500" }}
+                        >
+                          {item.title}
+                        </Link>
                       </li>
                     );
                   })}
                 </Box>
               </GridItem>
               {/* Terms and Policies  */}
-              <GridItem border="1px solid #E5E5E5" py={8} px={4}>
+              <GridItem py={8} px={4}>
                 <Text as="h2" fontSize="lg" fontWeight="bold" mb={4}>
                   Resources
                 </Text>
@@ -113,26 +115,35 @@ const Footer = () => {
                   {TermsPolicies.map((item) => {
                     return (
                       <li key={item.id}>
-                        <Link href={item.link}>{item.title}</Link>
+                        <Link
+                          href={item.link}
+                          _hover={{ color: "brandSecondary.500" }}
+                        >
+                          {item.title}
+                        </Link>
                       </li>
                     );
                   })}
                 </Box>
               </GridItem>
               {/* Socials link start here */}
-              <GridItem border="1px solid #E5E5E5" py={8} px={4}>
+              <GridItem py={8} px={4}>
                 <Footer_CompanyInfo />
               </GridItem>
             </Grid>
           </GridItem>
         </Grid>
         {/* copyright area  */}
-        <Box border="1px solid #E5E5E5" w="full" py={8} px={4}>
-          <Box border="1px solid #E5E5E5" textAlign="center">
-            <Text as="span" color="white">
-              &copy; Copyright 2024 &nbsp; Afritic Group. All rights reserved.
-            </Text>
-          </Box>
+        <Box
+          borderTop="1px solid #E5E5E5"
+          w="full"
+          pt={8}
+          px={4}
+          textAlign="center"
+        >
+          <Text as="span" color="white" fontSize="sm">
+            &copy; Copyright 2024 &nbsp; Afritic Group. All rights reserved.
+          </Text>
         </Box>
       </Container>
     </Box>

@@ -16,19 +16,17 @@ const Navbar = () => {
         justifyContent="space-between"
         w="dvw"
         mx="auto"
-        border={"1px solid #E5E5E5"}
         px={["1rem", "2rem", "4rem", "5rem", "6rem"]}
         py="1.25rem"
       >
         {/* logo area */}
-        <Flex border={"1px solid #E5E5E5"} justify="center" gap="0.5rem">
+        <Flex justify="center" gap="0.5rem">
           <Link href="/">
             <Image src="/assets/eVoty.svg" alt="eVoty Logo" maxHeight="4rem" />
           </Link>
         </Flex>
         {/* menu items area */}
         <Box
-          border={"1px solid #E5E5E5"}
           hideBelow="md"
           md={{ display: "flex", justifyContent: "center", gap: "1rem" }}
         >
@@ -61,7 +59,6 @@ const Navbar = () => {
         </Box>
         {/* CTA button area for sign up or login */}
         <Flex
-          border={"1px solid #E5E5E5"}
           fontWeight="semibold"
           justifyContent="center"
           // gap="1rem"
@@ -97,7 +94,6 @@ const Navbar = () => {
         </Flex>
         {/* mobile hamburger menu area */}
         <Flex
-          border={"1px solid #E5E5E5"}
           justifyContent="center"
           align="center"
           w="2.5rem"

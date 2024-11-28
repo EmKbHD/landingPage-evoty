@@ -49,7 +49,7 @@ const Footer_CompanyInfo = () => {
             href={social.link}
             key={social.id}
             gap={2}
-            _hover={{ color: "brandSecondary.400" }}
+            // _hover={{ color: "brandSecondary.500" }}
           >
             <Text
               as="span"
