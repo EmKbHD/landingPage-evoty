@@ -83,7 +83,6 @@ const Navbar = () => {
               as="button"
               px="1rem"
               py="0.5rem"
-              // mr="0.75rem"
               bg="primary"
               rounded="md"
               color="white"

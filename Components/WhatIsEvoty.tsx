@@ -4,7 +4,6 @@ const WhatIsEVoty = () => {
   return (
     <Box bg="#F1F4F5" borderRadius={{ base: "3xl", lg: "none" }}>
       <Container
-        border={"1px solid #E5E5E5"}
         w="full"
         mx="auto"
         px={["1rem", "2rem", "4rem", "5rem", "6rem"]}

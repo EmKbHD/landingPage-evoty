@@ -26,7 +26,6 @@ const Banners = () => {
 
   return (
     <Container
-      border="1px solid #E5E5E5"
       w="full"
       mx="auto"
       px={["1rem", "2rem", "4rem", "5rem", "6rem"]}

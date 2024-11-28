@@ -34,8 +34,8 @@ const Footer = () => {
   return (
     <Box
       bgGradient="to-r"
-      gradientFrom="#2e0909"
-      gradientTo="gray.900"
+      gradientFrom="#06062C"
+      gradientTo="#010102"
       borderTopRadius="2xl"
     >
       <Container mx="auto" px={["1rem", "2rem", "4rem", "5rem", "6rem"]} py={8}>
@@ -70,7 +70,7 @@ const Footer = () => {
 
             <Text
               as="p"
-              color="white"
+              color="gray.300"
               textAlign={{ base: "justify", md: "left" }}
             >
               Lorem, ipsum dolor sit amet consectetur adipisicing elit. In
@@ -85,6 +85,7 @@ const Footer = () => {
                 base: "repeat(2, 1fr)",
                 lg: "repeat(3, 1fr)",
               }}
+              ml={{ base: 8, md: 14 }}
             >
               {/* Important links start here */}
               <GridItem py={8} px={4}>
@@ -141,7 +142,7 @@ const Footer = () => {
           px={4}
           textAlign="center"
         >
-          <Text as="span" color="white" fontSize="sm">
+          <Text as="span" fontSize="sm" color="gray.300">
             &copy; Copyright 2024 &nbsp; Afritic Group. All rights reserved.
           </Text>
         </Box>
