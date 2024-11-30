@@ -34,8 +34,8 @@ const Footer = () => {
   return (
     <Box
       bgGradient="to-r"
-      gradientFrom="#00001B"
-      gradientTo="#010102"
+      gradientFrom="#111827"
+      gradientTo="gray.900"
       borderTopRadius="2xl"
     >
       <Container mx="auto" px={["1rem", "2rem", "4rem", "5rem", "6rem"]} py={8}>
@@ -142,7 +142,7 @@ const Footer = () => {
           px={4}
           textAlign="center"
         >
-          <Text as="span" fontSize="sm" color="gray.300">
+          <Text as="span" fontSize="sm" color="#A0A0A0">
             &copy; Copyright 2024 &nbsp; Afritic Group. All rights reserved.
           </Text>
         </Box>
