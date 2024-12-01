@@ -17,15 +17,18 @@ const Pricing: React.FC = () => {
 
   return (
     <Container
-      border="1px solid #E5E5E5"
       w="full"
       mx="auto"
       px={["1rem", "2rem", "4rem", "5rem", "6rem"]}
-      py="4rem"
+      pb={{ base: "2rem", md: "4rem" }}
     >
       <Box spaceY={6}>
-        <VStack textAlign={{ base: "left", md: "center" }}>
-          <Text as="h2" fontSize={{ base: "3xl", md: "4xl" }} fontWeight="bold">
+        <VStack textAlign="center">
+          <Text
+            as="h2"
+            fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+            fontWeight="bold"
+          >
             Choose The Right Plan for Your Business
           </Text>
           <Text fontSize="lg" color={"gray.600"} textAlign="center">

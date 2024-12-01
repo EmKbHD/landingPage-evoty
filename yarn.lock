@@ -2,63 +2,7 @@
 # yarn lockfile v1
 
 
-"@ark-ui/react@4.4.3":
-  version "4.4.3"
-  resolved "https://registry.yarnpkg.com/@ark-ui/react/-/react-4.4.3.tgz#5835bfa1ec02dad761ae74b68be53552d80215aa"
-  integrity sha512-Prd5EWcyL5PIigl8H70acVacL+Abl0l9gFw0sRNAZ9+3cGaXPhL4ol3s3AW9MU811ZAESU1xifsrwMyhpmcgmg==
-  dependencies:
-    "@internationalized/date" "3.5.6"
-    "@zag-js/accordion" "0.77.1"
-    "@zag-js/anatomy" "0.77.1"
-    "@zag-js/auto-resize" "0.77.1"
-    "@zag-js/avatar" "0.77.1"
-    "@zag-js/carousel" "0.77.1"
-    "@zag-js/checkbox" "0.77.1"
-    "@zag-js/clipboard" "0.77.1"
-    "@zag-js/collapsible" "0.77.1"
-    "@zag-js/collection" "0.77.1"
-    "@zag-js/color-picker" "0.77.1"
-    "@zag-js/color-utils" "0.77.1"
-    "@zag-js/combobox" "0.77.1"
-    "@zag-js/core" "0.77.1"
-    "@zag-js/date-picker" "0.77.1"
-    "@zag-js/date-utils" "0.77.1"
-    "@zag-js/dialog" "0.77.1"
-    "@zag-js/dom-query" "0.77.1"
-    "@zag-js/editable" "0.77.1"
-    "@zag-js/file-upload" "0.77.1"
-    "@zag-js/file-utils" "0.77.1"
-    "@zag-js/highlight-word" "0.77.1"
-    "@zag-js/hover-card" "0.77.1"
-    "@zag-js/i18n-utils" "0.77.1"
-    "@zag-js/menu" "0.77.1"
-    "@zag-js/number-input" "0.77.1"
-    "@zag-js/pagination" "0.77.1"
-    "@zag-js/pin-input" "0.77.1"
-    "@zag-js/popover" "0.77.1"
-    "@zag-js/presence" "0.77.1"
-    "@zag-js/progress" "0.77.1"
-    "@zag-js/qr-code" "0.77.1"
-    "@zag-js/radio-group" "0.77.1"
-    "@zag-js/rating-group" "0.77.1"
-    "@zag-js/react" "0.77.1"
-    "@zag-js/select" "0.77.1"
-    "@zag-js/signature-pad" "0.77.1"
-    "@zag-js/slider" "0.77.1"
-    "@zag-js/splitter" "0.77.1"
-    "@zag-js/steps" "0.77.1"
-    "@zag-js/switch" "0.77.1"
-    "@zag-js/tabs" "0.77.1"
-    "@zag-js/tags-input" "0.77.1"
-    "@zag-js/time-picker" "0.77.1"
-    "@zag-js/timer" "0.77.1"
-    "@zag-js/toast" "0.77.1"
-    "@zag-js/toggle-group" "0.77.1"
-    "@zag-js/tooltip" "0.77.1"
-    "@zag-js/tree-view" "0.77.1"
-    "@zag-js/types" "0.77.1"
-
-"@ark-ui/react@^4.4.4":
+"@ark-ui/react@4.4.4", "@ark-ui/react@^4.4.4":
   version "4.4.4"
   resolved "https://registry.yarnpkg.com/@ark-ui/react/-/react-4.4.4.tgz#c7c5bbe1ac1c5b95086e4766e112081ba47bb5c0"
   integrity sha512-oYIHk12bLM0VvqmDNLD4lINeoctDijLpuN0L9Rycp6MH9h4JNbSPN2LKgpHhPwoe0nEau3let6wsBOIydPcCvw==
@@ -225,18 +169,31 @@
     sucrase "^3.35.0"
     zod "^3.23.8"
 
-"@chakra-ui/react@^3.1.0":
-  version "3.2.0"
-  resolved "https://registry.yarnpkg.com/@chakra-ui/react/-/react-3.2.0.tgz#0ee8d0d3969fe70c79ec6868aa94261ab3b744c5"
-  integrity sha512-j87BakG4UYECd5B7FEjHLkSXJmr0vyffp7Noc2/3voHBb+YF94SFIB7CIKLTPQgKuIf+fKZM6MapPDmsMHk3Kg==
+"@chakra-ui/icons@^2.2.4":
+  version "2.2.4"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/icons/-/icons-2.2.4.tgz#fc3f59a7e377d6e4efdbe8ee0a3aec7f29a4ab32"
+  integrity sha512-l5QdBgwrAg3Sc2BRqtNkJpfuLw/pWRDwwT58J6c4PqQT6wzXxyNa8Q0PForu1ltB5qEiFb1kxr/F/HO1EwNa6g==
+
+"@chakra-ui/react@^3.2.2":
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/react/-/react-3.2.2.tgz#cd846cdfaf9002d7339f15e1932ed2a886c7374b"
+  integrity sha512-9GAESg6rSJ4NCfPAv2s5mOYnrFU+5x3xxR9Ab1phsZ2junR7po55PxB/Zdr1VNb1NX+6oIGMAR5s74oN5sYlfQ==
   dependencies:
-    "@ark-ui/react" "4.4.3"
+    "@ark-ui/react" "4.4.4"
     "@emotion/is-prop-valid" "1.3.1"
     "@emotion/serialize" "1.3.2"
     "@emotion/use-insertion-effect-with-fallbacks" "1.1.0"
     "@emotion/utils" "1.4.1"
     "@pandacss/is-valid-prop" "0.41.0"
     csstype "3.1.3"
+
+"@chakra-ui/styled-system@^2.12.0":
+  version "2.12.0"
+  resolved "https://registry.yarnpkg.com/@chakra-ui/styled-system/-/styled-system-2.12.0.tgz#72ad933bf11abd37c43086a3cb710e683a08ebc2"
+  integrity sha512-zoqLw1I2y4GlZ0LDoyw8o0JjoDOW6u0IwFPAoHuw0UMbP8glHUGvwEL1STug/i/GzBKw83yoF6ae41HIQvhMww==
+  dependencies:
+    "@chakra-ui/utils" "2.2.2"
+    csstype "^3.1.2"
 
 "@chakra-ui/theme-tools@^2.2.6":
   version "2.2.6"
@@ -1076,12 +1033,19 @@
   dependencies:
     aria-hidden "1.2.4"
 
-"@zag-js/auto-resize@0.77.1", "@zag-js/auto-resize@^0.77.1":
+"@zag-js/auto-resize@0.77.1":
   version "0.77.1"
   resolved "https://registry.yarnpkg.com/@zag-js/auto-resize/-/auto-resize-0.77.1.tgz#8799a1984bee6b387d2da598ae11232991099b78"
   integrity sha512-CIvUaxhwuqkpS/+Q816C531deN+RT8SRzDy3YfuvKRfGtEfRRTNuwk9P2dlo6MoinfORcjvX1y4EAaBjA/lsxw==
   dependencies:
     "@zag-js/dom-query" "0.77.1"
+
+"@zag-js/auto-resize@^0.78.0":
+  version "0.78.0"
+  resolved "https://registry.yarnpkg.com/@zag-js/auto-resize/-/auto-resize-0.78.0.tgz#17507ed57560f42068b55eccc0096eb6e33601a5"
+  integrity sha512-99EasmbakwDw9akHVZ53jUNewD7o0ZkPyw1SnZRv5cgpnoD9Olzntw+SXqjsJChCpOBdxtnmyTilbBae8tyKsA==
+  dependencies:
+    "@zag-js/dom-query" "0.78.0"
 
 "@zag-js/avatar@0.77.1":
   version "0.77.1"
@@ -1258,6 +1222,11 @@
   version "0.77.1"
   resolved "https://registry.yarnpkg.com/@zag-js/dom-query/-/dom-query-0.77.1.tgz#e925151d312727ab7e02bb6249e24ec6c171da0f"
   integrity sha512-hr+4lzx4wHqhunjMzAmNp7sma5K58o0ti1h5gXpei1puoeGs8epZfzjW/ZTsKyuVgH3+0f80YOC+oTK6rDAhcw==
+
+"@zag-js/dom-query@0.78.0":
+  version "0.78.0"
+  resolved "https://registry.yarnpkg.com/@zag-js/dom-query/-/dom-query-0.78.0.tgz#c2a24fe33362371d54316b8a52e22e8f49d78cc2"
+  integrity sha512-upjaXtsqJ5lilY5fQMKHDoMXd+77Rfply+3R6ajF1Jk7qhzyPLmb5FxL3ukvIH7NJHBfxLN248Ppjao1c2H8qA==
 
 "@zag-js/editable@0.77.1":
   version "0.77.1"
@@ -2168,7 +2137,7 @@ cross-spawn@^7.0.0, cross-spawn@^7.0.2:
     shebang-command "^2.0.0"
     which "^2.0.1"
 
-csstype@3.1.3, csstype@^3.0.2:
+csstype@3.1.3, csstype@^3.0.2, csstype@^3.1.2:
   version "3.1.3"
   resolved "https://registry.yarnpkg.com/csstype/-/csstype-3.1.3.tgz#d80ff294d114fb0e6ac500fbf85b60137d7eff81"
   integrity sha512-M1uQkMl8rQK/szD0LNhtqxIPLpimGm8sOBwU7lLnCpSbTyY3yeU1Vc7l4KT5zT4s/yOxHH5O7tIuuLOCnLADRw==
@@ -3376,6 +3345,11 @@ jackspeak@^3.1.2:
     "@isaacs/cliui" "^8.0.2"
   optionalDependencies:
     "@pkgjs/parseargs" "^0.11.0"
+
+jquery@^3.7.1:
+  version "3.7.1"
+  resolved "https://registry.yarnpkg.com/jquery/-/jquery-3.7.1.tgz#083ef98927c9a6a74d05a6af02806566d16274de"
+  integrity sha512-m4avr8yL8kmFN8psrbFFFmB/If14iN5o9nw/NgnnM+kybDJpRsAynV2BsfpTYrTRysYUdADVD7CkUUizgkpLfg==
 
 "js-tokens@^3.0.0 || ^4.0.0", js-tokens@^4.0.0:
   version "4.0.0"

@@ -33,17 +33,11 @@ const Hero = () => {
       position="relative"
       w="dvw"
       mx="auto"
-      border={"1px solid #E5E5E5"}
       px={["1rem", "2rem", "4rem", "5rem", "6rem"]}
       py="1.25rem"
     >
       {/* Company information */}
-      <Flex
-        border={"1px solid #E5E5E5"}
-        w="full"
-        alignItems="center"
-        justifyContent="center"
-      >
+      <Flex w="full" alignItems="center" justifyContent="center">
         <Stack spaceY="8">
           <MotionHeading
             variants={SlideRight(0.6)}
@@ -121,9 +115,11 @@ const Hero = () => {
               maxW="187px"
               flex="1"
               _hover={{
-                bg: "white",
+                bg: "transparent",
                 color: "primary",
                 border: "1px solid rgb(5, 45, 82)",
+                transform: "scale(1.05)",
+                transition: "transform 300ms ease-in-out",
               }}
             >
               Get Started
@@ -137,7 +133,12 @@ const Hero = () => {
               alignItems="center"
               flex="1"
               color="brandSecondary.500"
-              _hover={{ bg: "brandSecondary.500", color: "white" }}
+              _hover={{
+                bg: "brandSecondary.500",
+                color: "white",
+                transform: "scale(1.05)",
+                transition: "transform 300ms ease-in-out",
+              }}
             >
               <HiMiniPlayCircle />
               <Text as="span">Watch Demo</Text>
@@ -147,7 +148,6 @@ const Hero = () => {
       </Flex>
       {/* Hero image */}
       <Flex
-        border={"1px solid #E5E5E5"}
         justifyContent="center"
         alignItems="center"
         w="full"
@@ -161,6 +161,7 @@ const Hero = () => {
           alt="VOTE IMAGE"
           w={{ base: "21.875rem", md: "34.375rem", xl: "43.75rem" }}
           h="3/4"
+          filter="drop-shadow(-6px 8px 15px rgba(0, 0, 0, 0.2))"
         />
       </Flex>
     </Container>

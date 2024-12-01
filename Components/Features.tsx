@@ -19,7 +19,6 @@ const Features = () => {
 
   return (
     <Container
-      border={"1px solid #E5E5E5"}
       w="full"
       mx="auto"
       px={["1rem", "2rem", "4rem", "5rem", "6rem"]}
@@ -27,10 +26,10 @@ const Features = () => {
     >
       <Text
         as="h2"
-        fontSize="3xl"
-        fontWeight="semibold"
+        fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
+        fontWeight="bold"
         pb="1rem"
-        textAlign={{ base: "left", md: "center" }}
+        textAlign="center"
         fontFamily="suse"
         color="primary"
       >
@@ -39,8 +38,8 @@ const Features = () => {
       <Text
         as="p"
         fontSize="lg"
-        color="gray.500"
         fontWeight="medium"
+        color="gray.500"
         pb="1rem"
         textAlign="center"
       >

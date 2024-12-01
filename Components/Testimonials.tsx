@@ -44,13 +44,13 @@ const Testimonials = () => {
   };
 
   return (
-    <Box border="1px solid #E5E5E5" py={14} mb={10}>
+    <Box py={14} mb={10}>
       <Container mx="auto" px={["1rem", "2rem", "4rem", "5rem", "6rem"]} py={8}>
         {/* header section start here */}
         <Text
           as="h2"
-          textAlign={{ base: "left", md: "center" }}
-          mb={8}
+          textAlign="center"
+          mb={4}
           fontSize={{ base: "2xl", md: "3xl", lg: "4xl" }}
           fontWeight="bold"
         >
