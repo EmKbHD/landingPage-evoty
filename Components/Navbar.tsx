@@ -4,7 +4,7 @@ import { useState } from "react";
 import { NavbarMenu } from "../db/data";
 import { HiBars3 } from "react-icons/hi2";
 import NavbarMobile from "./NavbarMobile";
-import { Box, Flex, Image, Container, Link, Text } from "@chakra-ui/react";
+import { Box, Button, Flex, Image, Container, Link } from "@chakra-ui/react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -64,31 +64,30 @@ const Navbar = () => {
           // gap="1rem"
           px="1rem"
         >
-          <Link href="#" fontWeight="medium" color="gray.600">
-            <Text
-              as="button"
+          <Link href="/signup">
+            <Button
               px="1rem"
-              py="0.5rem"
+              // py="0.5rem"
               mr="0.75rem"
               bg="secondary"
               rounded="md"
               color="white"
             >
               Sign up
-            </Text>
+            </Button>
           </Link>
 
-          <Link href="#" fontWeight="medium" color="gray.600">
-            <Text
-              as="button"
+          <Link href="/signin">
+            <Button
               px="1rem"
-              py="0.5rem"
+              // py="0.5rem"
               bg="primary"
+              _hover={{ bg: "primary/80" }}
               rounded="md"
               color="white"
             >
               Log in
-            </Text>
+            </Button>
           </Link>
         </Flex>
         {/* mobile hamburger menu area */}
