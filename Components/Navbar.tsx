@@ -58,18 +58,13 @@ const Navbar = () => {
           </Flex>
         </Box>
         {/* CTA button area for sign up or login */}
-        <Flex
-          fontWeight="semibold"
-          justifyContent="center"
-          // gap="1rem"
-          px="1rem"
-        >
+        <Flex fontWeight="semibold" justifyContent="center" px="1rem">
           <Link href="/signup">
             <Button
               px="1rem"
-              // py="0.5rem"
               mr="0.75rem"
               bg="secondary"
+              _hover={{ bg: "secondary/90" }}
               rounded="md"
               color="white"
             >
@@ -80,9 +75,8 @@ const Navbar = () => {
           <Link href="/signin">
             <Button
               px="1rem"
-              // py="0.5rem"
               bg="primary"
-              _hover={{ bg: "primary/80" }}
+              _hover={{ bg: "primary/90" }}
               rounded="md"
               color="white"
             >
