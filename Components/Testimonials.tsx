@@ -7,7 +7,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Box, Container, Flex, Image, Text } from "@chakra-ui/react";
 
 const Testimonials = () => {
-  const settings = {
+  const settings: any = {
     dots: true,
     infinite: true,
     slidesToShow: 3,

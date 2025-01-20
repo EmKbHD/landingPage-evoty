@@ -17,7 +17,7 @@ import {
   Link,
 } from "@chakra-ui/react";
 import { useFormik } from "formik";
-import { PasswordInput } from "@/ui/password-input";
+import { PasswordInput, PasswordStrengthMeter } from "@/ui/password-input";
 
 export default function SignUpPage() {
   const { values, handleBlur, handleChange } = useFormik({
@@ -77,23 +77,21 @@ export default function SignUpPage() {
               >
                 {/* firstname and lastname fields start here */}
                 <HStack>
-                  <Field label="First Name" required>
+                  <Field label="First Name">
                     <Input
                       value={values.firstname}
                       onChange={handleChange}
                       id="firstName"
                       type="text"
-                      color="gray.800"
                       onBlur={handleBlur}
                     />
                   </Field>
-                  <Field label="Last Name" required>
+                  <Field label="Last Name">
                     <Input
                       value={values.lastname}
                       onChange={handleChange}
                       id="lastName"
                       type="text"
-                      color="gray.800"
                       onBlur={handleBlur}
                     />
                   </Field>
@@ -101,7 +99,6 @@ export default function SignUpPage() {
                 {/* email address field starts here */}
                 <Field
                   label="Email address"
-                  required
                   helperText="We'll never share your email."
                 >
                   <Input
@@ -109,7 +106,6 @@ export default function SignUpPage() {
                     onChange={handleChange}
                     id="email"
                     type="email"
-                    color="gray.800"
                     onBlur={handleBlur}
                   />
                 </Field>
@@ -118,33 +114,29 @@ export default function SignUpPage() {
                   id="password"
                   label="Password"
                   display={"flex"}
-                  required
                   border={"1px solid #E5E7EB"}
                 >
                   <PasswordInput
                     value={values.password}
                     onChange={handleChange}
-                    color="gray.800"
                     onBlur={handleBlur}
                   />
+                  <PasswordStrengthMeter value={1} />
                 </Field>
                 <Field
                   id="confirmpassword"
                   label="Confirm Password"
                   display={"flex"}
-                  required
                   border={"1px solid #E5E7EB"}
                 >
                   <PasswordInput
                     value={values.confirmpassword}
                     onChange={handleChange}
-                    color="gray.800"
                     onBlur={handleBlur}
                   />
                 </Field>
                 <Stack gap={10} pt={2}>
                   <Button
-                    // loadingText="Submitting"
                     size="lg"
                     type="submit"
                     bg={"brandPrimary.800"}
