@@ -15,6 +15,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 
 const LoginForm = () => {
+  // Initial form values for input fields
   const initialValues = {
     email: "",
     password: "",
